@@ -279,6 +279,10 @@
       <Project>{770a0084-6166-4ac9-aeee-43272c2cf2c3}</Project>
       <Name>Northwind.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Northwind.Interfaces\Northwind.Interfaces.csproj">
+      <Project>{b362e3a5-c790-4e1a-b9dd-7b6a2074d1e1}</Project>
+      <Name>Northwind.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
