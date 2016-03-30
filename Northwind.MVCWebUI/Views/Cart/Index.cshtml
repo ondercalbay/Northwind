@@ -1,0 +1,36 @@
+﻿@model Northwind.Entities.Cart
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>Products in the cart</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="list-group">
+                @foreach (var line in Model.Lines)
+                {
+                    <li class="list-group-item">
+                        <div class="list-group-item-heading"><h4>@line.Product.ProductName</h4></div>
+                        <div>@line.Product.UnitPrice.ToString("c2") * @line.Quantity = @line.TotalPrice.ToString("c2") </div>
+                        <div>
+                            @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                            {
+                                <input type="submit" class="btn btn-danger" value="Sepetten Çıkart" />
+                                @Html.Hidden("productId", line.Product.ProductId);
+                            }
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+
