@@ -1,5 +1,6 @@
 ﻿using Northwind.Bll;
 using Northwind.Dal.Concrete.EntityFramework;
+using Northwind.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,16 @@ namespace MvcWebUI.Controllers
 {
     public class ProductController : Controller
     {
-        ProductManager _productManager = new ProductManager(new EfProductDal());
-        
+        IProductService _productService;
+
+        public ProductController(IProductService productService)
+        {
+            _productService = productService;
+        }
+
         public ViewResult Index()
         {
-            return View(_productManager.GetAll());
+            return View(_productService.GetAll());
         }
     }
 }
