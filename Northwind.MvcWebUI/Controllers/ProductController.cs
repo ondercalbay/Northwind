@@ -1,11 +1,13 @@
-﻿using MvcWebUI.Models;
-using Northwind.Entities;
+﻿using Northwind.Entities;
 using Northwind.Interfaces;
+using Northwind.MvcWebUI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
-namespace MvcWebUI.Controllers
+namespace Northwind.MvcWebUI.Controllers
 {
     public class ProductController : Controller
     {
@@ -31,7 +33,7 @@ namespace MvcWebUI.Controllers
                                     CurrentPage = page
                                 }
                             }
-                
+
                 );
         }
     }

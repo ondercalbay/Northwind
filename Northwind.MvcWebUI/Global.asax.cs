@@ -1,9 +1,9 @@
-﻿using MvcWebUI.Infrastructure;
+﻿using Northwind.MvcWebUI.Infrastructure;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace MvcWebUI
+namespace Northwind.MvcWebUI
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -13,8 +13,8 @@ namespace MvcWebUI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
 
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
         }
     }
 }

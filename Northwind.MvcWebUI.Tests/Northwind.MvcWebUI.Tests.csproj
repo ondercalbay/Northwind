@@ -6,11 +6,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CDD7F466-C980-4625-B228-75685C9634FA}</ProjectGuid>
+    <ProjectGuid>{608B0E43-58EE-4314-943D-F24CA102C320}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvcWebUI.Tests</RootNamespace>
-    <AssemblyName>MvcWebUI.Tests</AssemblyName>
+    <RootNamespace>Northwind.MvcWebUI.Tests</RootNamespace>
+    <AssemblyName>Northwind.MvcWebUI.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind.MvcWebUI\Northwind.MvcWebUI.csproj">
+      <Project>{7321F1E6-08F6-4071-9339-3DD3BF8A280F}</Project>
+      <Name>Northwind.MvcWebUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

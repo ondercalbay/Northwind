@@ -6,7 +6,7 @@ using System;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace MvcWebUI.Infrastructure
+namespace Northwind.MvcWebUI.Infrastructure
 {
     public class NinjectControllerFactory : DefaultControllerFactory
     {
@@ -20,7 +20,7 @@ namespace MvcWebUI.Infrastructure
 
         private void AddBllBindings()
         {
-            _ninject_Kernel.Bind<IProductService>().To<ProductManager>().WithConstructorArgument("productDal",new EfProductDal());
+            _ninject_Kernel.Bind<IProductService>().To<ProductManager>().WithConstructorArgument("productDal", new EfProductDal());
         }
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)

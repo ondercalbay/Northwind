@@ -1,14 +1,14 @@
-﻿@model List<Northwind.Entities.Product>
+﻿@model Northwind.MvcWebUI.Models.ProductViewModel
 
 @{
-    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 
 <div class="col-sm-3 col-md-2">
     <br />
     <br />
-    <div class="list-group">       
+    <div class="list-group">
         <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
     </div>
 </div>
@@ -24,8 +24,8 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            @foreach (var item in Model)
-                {
+            @foreach (var item in Model.Products)
+            {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.ProductName)
@@ -39,7 +39,7 @@
                         @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
                     </td>
                 </tr>
-                }
+            }
 
         </table>
     </div>
