@@ -1,0 +1,46 @@
+﻿@model List<Northwind.Entities.Product>
+
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<div class="col-sm-3 col-md-2">
+    <br />
+    <br />
+    <div class="list-group">       
+        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+    </div>
+</div>
+<div class="col-sm-9 col-md-10">
+    <h1 class="page-header">Products</h1>
+    <h2 class="sub-header">List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Unite Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                    </td>
+                </tr>
+                }
+
+        </table>
+    </div>
+</div> 
