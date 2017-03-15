@@ -1,5 +1,6 @@
 ﻿using Ninject;
 using Northwind.Bll;
+using Northwind.Bll.Concrate;
 using Northwind.Dal.Concrete.EntityFramework;
 using Northwind.Interfaces;
 using System;

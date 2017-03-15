@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{608B0E43-58EE-4314-943D-F24CA102C320}</ProjectGuid>
+    <ProjectGuid>{BF53EF62-6D34-4EF3-9561-8E1DC66556FB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Northwind.MvcWebUI.Tests</RootNamespace>

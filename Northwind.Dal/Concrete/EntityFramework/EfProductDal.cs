@@ -1,7 +1,7 @@
 ﻿using Northwind.Dal.Abstract;
+using Northwind.Entities;
 using System.Collections.Generic;
 using System.Linq;
-using Northwind.Entities;
 
 namespace Northwind.Dal.Concrete.EntityFramework
 {
