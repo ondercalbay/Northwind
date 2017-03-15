@@ -1,0 +1,28 @@
+﻿@model Northwind.MVCWebUI.Models.ProductViewModel
+
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+<div class="col-sm-12">
+    <div class="list-group">
+        <div class="list-group-item list-group-item-info"><h4 class="list-group-item-heading">Products</h4></div>
+        @foreach (var product in Model.Products)
+        {
+            <div class="list-group-item">
+                @product.ProductName <span class="badge">@product.UnitPrice.ToString("c2")</span>
+
+                @using (Html.BeginForm("AddToCart", "Cart"))
+                {
+                    <input type="submit" class="btn btn-primary" value="Add To Cart" />
+                    @Html.Hidden("productId", product.ProductId);
+                }
+            </div>
+        }
+        @Northwind.MVCWebUI.HtmlHelpers.PagingHelpers.Pager(Model.PagingInfo);
+    </div>
+</div>
+

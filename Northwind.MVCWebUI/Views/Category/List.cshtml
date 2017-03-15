@@ -1,0 +1,13 @@
+﻿@model List<Northwind.Entities.Category>
+
+<div class="list-group">
+    <div class="list-group-item list-group-item-info"><h4 class="list-group-item-heading">Categories</h4></div>
+    <a class="list-group-item" href="/Product/Index">Home</a>
+    @foreach (var category in Model)
+    {
+        @Html.RouteLink(category.CategoryName,
+                        new { controller = "Product", action = "Index", category = category.CategoryID },
+                        new { @class = "list-group-item" + (ViewBag.CurrentCategory == category.CategoryID ? " active" : "") })
+        //<a class="" href="/Product/Index?Category=@category.CategoryID">@category.CategoryName</a>
+    }
+</div>

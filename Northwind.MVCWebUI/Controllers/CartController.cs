@@ -58,5 +58,25 @@ namespace Northwind.MVCWebUI.Controllers
 
             return RedirectToAction("Index", cart);
         }
+
+        //[HttpGet] default yazmassak 
+        public ActionResult Checkout()
+        {
+            return View(new ShippingDetails());
+        }
+
+        [HttpPost]
+        public ActionResult Checkout(ShippingDetails shippingDetails)
+        {
+            if (ModelState.IsValid)
+            {
+                //mangerdan veri tabanına kayıt yap.
+                return View("Completed");
+            }
+            else
+            {
+                return View(shippingDetails);
+            }
+        }
     }
 }
